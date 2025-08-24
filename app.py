@@ -9,6 +9,7 @@ links = [
     ("GitHub", "https://github.com"),
     ("Google", "https://www.google.com"),
     ("Python公式", "https://www.python.org")
+    ("Gmail", "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox")
 ]
 
 @app.route('/')
