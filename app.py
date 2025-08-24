@@ -1,4 +1,5 @@
 from flask import Flask, render_template_string
+import os
 
 app = Flask(__name__)
 
@@ -8,7 +9,7 @@ links = [
     ("Join Support", "https://www.join-kk.jp/mobile/mypages/"),
     ("GitHub", "https://github.com"),
     ("Google", "https://www.google.com"),
-    ("Python公式", "https://www.python.org")
+    ("Python公式", "https://www.python.org"),
     ("Gmail", "https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox")
 ]
 
@@ -58,4 +59,5 @@ def index():
     ''')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
